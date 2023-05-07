@@ -30,6 +30,7 @@ public class ATMoperationIMPL implements ATMoperationInterf {
 
     @Override
     public void depositAmount(double depositAmount) {
+       ministmt.put(depositAmount," Amount deposited"); 
         System.out.println(depositAmount+" Amount deposited successfully");
         atm.setBalance(atm.getBalance()+depositAmount);
         viewBalance();
